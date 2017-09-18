@@ -15,6 +15,14 @@ class App extends Component {
       newTodo: '',
       todoList: []
     }
+    let user = getCurrentUser()
+        if (user) {
+          TodoModel.getByUser(user, (todos) => {
+            let stateCopy = JSON.parse(JSON.stringify(this.state))
+            stateCopy.todoList = todos
+            this.setState(stateCopy)
+          })
+        }
   }
   render() {
     let todos = this.state.todoList.filter((item) => !item.deleted).map((item, index) => {
@@ -54,20 +62,25 @@ class App extends Component {
   }
   componentDidUpdate() {}
   toggle(e, todo) {
-    todo.status = todo.status === 'completed'
-      ? ''
-      : 'completed'
-    this.setState(this.state)
-
+    let oldStatus = todo.status
+    todo.status = todo.status === 'completed' ? '' : 'completed'
+      TodoModel.update(todo, () => {
+          this.setState(this.state)
+        }, (error) => {
+          todo.status = oldStatus
+          this.setState(this.state)
+        })
   }
   delete(event, todo) {
-    todo.deleted = true
-    this.setState(this.state)
+    TodoModel.destroy(todo.id, () => {
+        todo.deleted = true
+        this.setState(this.state)
+    })
   }
   addTodo(event) {
     let newTodo = {
       title: event.target.value,
-      status: null,
+      status: '',
       deleted: false
     }
     TodoModel.create(newTodo,(id) => {
