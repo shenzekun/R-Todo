@@ -4,7 +4,7 @@ import SignInForm from './SignInForm'
 
 export default class SignInOrSignUp extends Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       selected: 'signUp'
     }
@@ -12,7 +12,7 @@ export default class SignInOrSignUp extends Component {
 
   switch (e) {
     this.setState({
-      selected: e.target.value
+      selected: e.target.value,
     })
   }
 

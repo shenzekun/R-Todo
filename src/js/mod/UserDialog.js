@@ -1,67 +1,66 @@
 import React, {Component} from 'react';
-import './UserDialog.css'
+import '../../css/UserDialog.css'
 import {signUp, signIn, sendPasswordResetEmail} from './leanCloud'
 import SignInOrSignUp from './SignInOrSignUp'
 import ForgotPasswordForm from './ForgotPasswordForm'
 
 export default class UserDialog extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
-            selectedTab: 'signInOrSignUp', // 'forgotPassword'
+            selectedTab: 'signInOrSignUp',
             formData: {
                 email: '',
                 username: '',
-                password: ''
+                password: '',
             }
         }
     }
 
+    /*注册*/
     signUp(e) {
-        e.preventDefault()
-        let {username, password} = this.state.formData
+        e.preventDefault();// 阻止打开打开一个新页面
+        let {username, password} = this.state.formData;
         let success = (user) => {
-            this
-                .props
-                .onSignUp
-                .call(null, user)
-        }
+            this.props.onSignUp.call(null, user)
+        };
         let error = (error) => {
             switch (error.code) {
                 case 202:
                     alert('用户名已被占用');
-                    break
+                    break;
                 default:
                     alert(error);
-                    break
+                    break;
             }
-        }
+        };
         signUp(username, password, success, error)
     }
+
+
     signIn(e) {
-        e.preventDefault()
-        let {email, username, password} = this.state.formData
+        e.preventDefault();
+        let {email, username, password} = this.state.formData;
         let success = (user) => {
-            this
-                .props
-                .onSignIn
-                .call(null, user)
-        }
+            this.props.onSignIn.call(null, user)
+        };
         let error = (error) => {
             switch (error.code) {
                 case 210:
                     alert('用户名与密码不匹配');
-                    break
+                    break;
                 default:
                     alert(error);
-                    break
+                    break;
             }
-        }
+        };
         signUp(email, username, password, success, error)
     }
+
     changeFormData(key, e) {
-        let stateCopy = JSON.parse(JSON.stringify(this.state)) // 用 JSON 深拷贝
-        stateCopy.formData[key] = e.target.value
+        console.log(this.state);
+        let stateCopy = JSON.parse(JSON.stringify(this.state)); // 用 JSON 深拷贝
+        stateCopy.formData[key] = e.target.value;
         this.setState(stateCopy)
     }
 
@@ -72,11 +71,11 @@ export default class UserDialog extends Component {
                 <div className="UserDialog">
                     {this.state.selectedTab === 'signInOrSignUp'
                         ? <SignInOrSignUp
-                                formData={this.state.formData}
-                                onSignIn={this.signIn.bind(this)}
-                                onSignUp={this.signUp.bind(this)}
-                                onChange={this.changeFormData.bind(this)}
-                                onForgotPassword={this.showForgotPassword.bind(this)}/>
+                            formData={this.state.formData}
+                            onSignIn={this.signIn.bind(this)}
+                            onSignUp={this.signUp.bind(this)}
+                            onChange={this.changeFormData.bind(this)}
+                            onForgotPassword={this.showForgotPassword.bind(this)}/>
                         : <ForgotPasswordForm
                             formData={this.state.formData}
                             onSubmit={this.resetPassword.bind(this)}
@@ -88,17 +87,20 @@ export default class UserDialog extends Component {
     }
 
     showForgotPassword() {
-        let stateCopy = JSON.parse(JSON.stringify(this.state))
-        stateCopy.selectedTab = 'forgotPassword'
-        this.setState(stateCopy)
+        let stateCopy = JSON.parse(JSON.stringify(this.state));
+        stateCopy.selectedTab = 'forgotPassword';
+        this.setState(stateCopy);
     }
+
     returnToSignIn() {
-        let stateCopy = JSON.parse(JSON.stringify(this.state))
-        stateCopy.selectedTab = 'signInOrSignUp'
-        this.setState(stateCopy)
+        let stateCopy = JSON.parse(JSON.stringify(this.state));
+        stateCopy.selectedTab = 'signInOrSignUp';
+        this.setState(stateCopy);
     }
+
+    //重置密码
     resetPassword(e) {
-        e.preventDefault()
-        sendPasswordResetEmail(this.state.formData.email)
+        e.preventDefault();
+        sendPasswordResetEmail(this.state.formData.email);
     }
 }
