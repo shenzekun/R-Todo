@@ -5,6 +5,9 @@ import TodoInput from '../../js/mod/TodoInput'
 import TodoItem from '../../js/mod/TodoItem'
 import UserDialog from '../../js/mod/UserDialog'
 import {getCurrentUser, signOut, TodoModel} from '../../js/mod/leanCloud'
+import '../../bootstrap/css/bootstrap.min.css'
+import '../../bootstrap/css/bootstrapValidator.css'
+
 
 
 class App extends Component {
@@ -62,22 +65,33 @@ class App extends Component {
 
     toggle(e, todo) {
         let oldStatus = todo.status;
-        todo.status = todo.status === 'completed' ? '' : 'completed';
+        todo.status = (todo.status === 'completed' ? '' : 'completed');
         TodoModel.update(todo, () => {
             this.setState(this.state)
         }, (error) => {
+            console.log(error);
             todo.status = oldStatus;
             this.setState(this.state)
         })
     }
 
-    delete(event, todo) {
+    /*删除todo*/
+    delete(e, todo) {
         TodoModel.destroy(todo.id, () => {
             todo.deleted = true;
             this.setState(this.state)
+        },(error)=>{
+            console.log(error);
         })
     }
 
+
+/*增加todo
+* 每个todo 拥有：
+id - 区分两个todo的依据
+title - 也就是用户写的东西
+status - completed 表示完成，空表示未完成
+deleted - bool 值，表示是否删除了*/
     addTodo(event) {
         let newTodo = {
             title: event.target.value,
@@ -97,6 +111,7 @@ class App extends Component {
     }
 
 
+    /*监听输入框的变化*/
     changeTitle(event) {
         this.setState({newTodo: event.target.value, todoList: this.state.todoList})
     }
@@ -107,6 +122,7 @@ class App extends Component {
         this.setState(stateCopy)
     }
 
+    /*登出*/
     signOut() {
         signOut();
         let stateCopy = JSON.parse(JSON.stringify(this.state));
