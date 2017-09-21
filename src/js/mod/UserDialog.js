@@ -3,9 +3,14 @@ import '../../css/UserDialog.css'
 import {signUp, signIn, sendPasswordResetEmail} from './leanCloud'
 import SignInOrSignUp from './SignInOrSignUp'
 import ForgotPasswordForm from './ForgotPasswordForm'
+import '../../bootstrap/css/bootstrap.min.css'
+import '../../bootstrap/css/bootstrapValidator.css'
 import $ from 'jquery';
-import '../../bootstrap/js/bootstrap.min.js'
-import '../../bootstrap/js/bootstrapValidator.js'
+
+window.jQuery = $;
+require('bootstrap/dist/js/bootstrap.min.js');
+require('../../bootstrap/js/bootstrapValidator.js');
+
 
 export default class UserDialog extends Component {
 
@@ -20,105 +25,15 @@ export default class UserDialog extends Component {
             }
         }
     }
-//     componentDidMount(){
-//
-//         $('form').bootstrapValidator({
-// //        live: 'disabled',
-//                 message: 'This value is not valid',
-//                 feedbackIcons: {
-//                     valid: 'glyphicon glyphicon-ok',
-//                     invalid: 'glyphicon glyphicon-remove',
-//                     validating: 'glyphicon glyphicon-refresh'
-//                 },
-//                 fields: {
-//                     /*
-//                     firstName: {
-//                         validators: {
-//                             notEmpty: {
-//                                 message: '姓名不能为空'
-//                             }
-//                         }
-//                     },
-//                     lastName: {
-//                         validators: {
-//                             notEmpty: {
-//                                 message: '姓名不能为空'
-//                             }
-//                         }
-//                     },
-//                     */
-//                     username: {
-//                         message: '用户名无效',
-//                         validators: {
-//                             notEmpty: {
-//                                 message: '用户名不能位空'
-//                             },
-//                             stringLength: {
-//                                 min: 6,
-//                                 max: 30,
-//                                 message: '用户名必须大于6，小于30个字'
-//                             },
-//                             regexp: {
-//                                 regexp: /^[a-zA-Z0-9_\.]+$/,
-//                                 message: '用户名只能由字母、数字、点和下划线组成'
-//                             },
-//                             remote: {
-//                                 url: '#',
-//                                 message: '用户名不可用'
-//                             },
-//                             different: {
-//                                 field: 'password',
-//                                 message: '用户名和密码不能相同'
-//                             }
-//                         }
-//                     },
-//                     email: {
-//                         validators: {
-//                             emailAddress: {
-//                                 message: '输入不是有效的电子邮件地址'
-//                             }
-//                         }
-//                     },
-//                     password: {
-//                         validators: {
-//                             notEmpty: {
-//                                 message: '密码不能位空'
-//                             },
-//                             identical: {
-//                                 field: 'confirmPassword',
-//                                 message: '两次密码不一致'
-//                             },
-//                             different: {
-//                                 field: 'username',
-//                                 message: '用户名和密码不能相同'
-//                             }
-//                         }
-//                     },
-//                     confirmPassword: {
-//                         validators: {
-//                             notEmpty: {
-//                                 message: '密码不能为空'
-//                             },
-//                             identical: {
-//                                 field: 'password',
-//                                 message: '两次密码不一致'
-//                             },
-//                             different: {
-//                                 field: 'username',
-//                                 message: '用户名和密码不能相同'
-//                             }
-//                         }
-//                     }
-//                 }
-//             });
-//
-//
-//     }
 
+    //插入 dom 之后调用
+    componentDidMount() {
+        this.check("#defaultForm");
+    }
     /*注册*/
     signUp(e) {
         e.preventDefault();// 阻止打开打开一个新页面
-        let {email,username, password} = this.state.formData;
+        let {email, username, password} = this.state.formData;
         let success = (user) => {
             this.props.onSignUp.call(null, user)
         };
@@ -132,14 +47,17 @@ export default class UserDialog extends Component {
                     break;
             }
         };
+        if (!this.state.formData.username || !this.state.formData.password || !this.state.formData.email) {
+            return false;
+        }
         /*leanCloud.js*/
-        signUp(email,username, password, success, error)
+        signUp(email, username, password, success, error)
     }
 
     /*登录*/
     signIn(e) {
         e.preventDefault();
-        let {email, username, password} = this.state.formData;
+        let {username, password} = this.state.formData;
         let success = (user) => {
             this.props.onSignIn.call(null, user)
         };
@@ -153,7 +71,10 @@ export default class UserDialog extends Component {
                     break;
             }
         };
-        signUp(email, username, password, success, error)
+        if (!this.state.formData.username || !this.state.formData.password) {
+            return false;
+        }
+        signIn(username, password, success, error)
     }
 
     changeFormData(key, e) {
@@ -199,5 +120,63 @@ export default class UserDialog extends Component {
     resetPassword(e) {
         e.preventDefault();
         sendPasswordResetEmail(this.state.formData.email);
+    }
+
+    /*验证表单正确性
+    * 参数：1.表单容器元素 el  2. 提交按钮元素 btn
+    * */
+    check(el) {
+        $(el).bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {
+                            min: 4,
+                            max: 18,
+                            message: '用户名长度必须在4到18位之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_]+$/,
+                            message: '用户名只能包含大写、小写、数字和下划线'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: '邮箱不能为空'
+                        },
+                        emailAddress: {
+                            message: '输入不是有效的电子邮件地址'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 18,
+                            message: '密码长度必须在6到18位之间'
+                        }
+                    }
+                }
+            }
+        });
+        // $(btn).click(function () {
+        //     $(el).bootstrapValidator('validate');
+        // });
     }
 }
