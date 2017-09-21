@@ -5,11 +5,6 @@ import TodoInput from '../../js/mod/TodoInput'
 import TodoItem from '../../js/mod/TodoItem'
 import UserDialog from '../../js/mod/UserDialog'
 import {getCurrentUser, signOut, TodoModel} from '../../js/mod/leanCloud'
-import '../../bootstrap/css/bootstrap.min.css'
-import '../../bootstrap/css/bootstrapValidator.css'
-
-
-
 class App extends Component {
 
     constructor(props) {
