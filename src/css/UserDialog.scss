@@ -1,0 +1,70 @@
+.UserDialog-Wrapper {
+  /*全屏*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsla(0, 0%, 0%, 0.40);
+  .UserDialog {
+    border: 1px solid;
+    border-radius: 4px;
+    min-width: 32em;
+    background: white;
+    border: 1px solid #aaa;
+    box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.35);
+    .signInOrSignUp {
+
+      &>nav:first-child{
+        padding: 1em;
+        margin-left: -2em;
+      }
+      &>nav:first-child label{
+        margin-left: 2em;
+        cursor: pointer;
+      }
+
+      .panes{
+        padding: 0 1em 1em;
+      }
+    }
+
+    .forgotPassword{
+      &>h3{
+        padding: 1em;
+      }
+      &>form{
+        padding: 0 1em 1em;
+      }
+    }
+
+    form{
+      &>.row{
+        display: flex;
+        padding: .3em 0;
+
+        &>label:first-child{
+          width: 4em;
+        }
+      }
+
+      &>.row.actions{
+        padding-left: 4em;
+        display: flex;
+        align-items: center;
+
+        & button{
+          margin-right: .5em;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
