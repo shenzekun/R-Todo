@@ -4,9 +4,7 @@ export default class ForgotPasswordForm extends Component {
     render() {
         return (
             <div className="forgotPassword">
-                <h3>
-                    重置密码
-                </h3>
+                <h3 className="horizontal divider"><i className="bar chart icon"></i>重置密码</h3>
 
                 <form className="ui form" onSubmit={this.props.onSubmit} id="defaultForm">
                     <div className="field">
@@ -18,7 +16,9 @@ export default class ForgotPasswordForm extends Component {
                         </div>
                     </div>
                     <button className="ui fluid blue submit button" type="submit">发送重置邮件</button>
+                    <div className="right">
                     <a href="#" onClick={this.props.onSignIn}>返回登录</a>
+                    </div>
                 </form>
             </div>
         )

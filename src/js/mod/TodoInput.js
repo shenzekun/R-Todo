@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../css/TodoInput.css'
 
 function submit(props, e) {
     if (e.key === 'Enter') {
@@ -14,8 +15,13 @@ function changeTitle(props, e) {
 
 
 export default function (props) {
-    return <input type="text" value={props.content}
-        className="TodoInput"
-        onChange={changeTitle.bind(null, props)}
-        onKeyPress={submit.bind(null, props)}/>
+    return (
+        <div className="field">
+            <div className="ui right icon input TodoInput">
+                <input type="text" value={props.content} onChange={changeTitle.bind(null, props)}
+                       onKeyPress={submit.bind(null, props)} placeholder="输入你的Todo"/>
+                <i className="reply icon"></i>
+            </div>
+        </div>
+    )
 }
