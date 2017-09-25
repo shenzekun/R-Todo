@@ -45,6 +45,7 @@ export default class UserDialog extends Component {
 
     //重新渲染后调用
     componentWillUpdate() {
+        this.check(".ui.form");
     }
 
     /*注册*/

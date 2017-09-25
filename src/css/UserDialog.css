@@ -25,20 +25,5 @@
       cursor: pointer; }
     .UserDialog-Wrapper .UserDialog .signInOrSignUp .panes {
       padding: 0 1em 1em; }
-    .UserDialog-Wrapper .UserDialog .forgotPassword > h3 {
-      padding: 1em; }
-    .UserDialog-Wrapper .UserDialog .forgotPassword > form {
-      padding: 0 1em 1em; }
-    .UserDialog-Wrapper .UserDialog form > .row {
-      display: flex;
-      padding: .3em 0; }
-      .UserDialog-Wrapper .UserDialog form > .row > label:first-child {
-        width: 4em; }
-    .UserDialog-Wrapper .UserDialog form > .row.actions {
-      padding-left: 4em;
-      display: flex;
-      align-items: center; }
-      .UserDialog-Wrapper .UserDialog form > .row.actions button {
-        margin-right: .5em; }
 
 /*# sourceMappingURL=UserDialog.css.map */

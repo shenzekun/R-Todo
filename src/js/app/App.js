@@ -66,6 +66,7 @@ class App extends Component {
             this.setState(this.state)
         })
     }
+
     /*删除todo*/
     delete(e, todo) {
         TodoModel.destroy(todo.id, () => {
@@ -75,6 +76,7 @@ class App extends Component {
             console.log(error);
         })
     }
+
     /*增加todo
     * 每个todo 拥有：
     id - 区分两个todo的依据

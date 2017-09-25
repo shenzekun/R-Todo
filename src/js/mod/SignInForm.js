@@ -21,7 +21,9 @@ export default function (props) {
             </div>
             <div className="ui error message"></div>
             <button className="ui fluid blue submit button" type="submit">登录</button>
-            <a href="#" onClick={props.onForgotPassword}>忘记密码了？</a>
+            <div className="right">
+                <a href="#" onClick={props.onForgotPassword}>忘记密码了？</a>
+            </div>
         </form>
     )
 }
