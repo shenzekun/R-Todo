@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../../css/App.css';
-import 'normalize.css'
+import '../../css/index.css'
 import TodoItem from '../../js/mod/TodoItem'
 import LoginDialog from '../mod/LoginDialog'
 import UserDialog from '../mod/UserDialog'
@@ -116,9 +116,12 @@ class App extends Component {
     /*登出*/
     signOut() {
         signOut();
+        setTimeout(function () {
+            document.location.reload();
+        },1000);
         let stateCopy = JSON.parse(JSON.stringify(this.state));
         stateCopy.user = {};
-        this.setState(stateCopy)
+        this.setState(stateCopy);
     }
 }
 

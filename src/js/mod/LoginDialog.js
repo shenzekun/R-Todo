@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../css/UserDialog.css'
+import '../../css/LoginDialog.css'
 import {signUp, signIn, sendPasswordResetEmail} from './leanCloud'
 import ForgotPasswordForm from './ForgotPasswordForm'
 import SignUpForm from './SignUpForm'
@@ -16,7 +16,7 @@ export default class LoginDialog extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'signIn',
+            selectedTab: 'signIn',//默认进入登录界面
             formData: {
                 email: '',
                 username: '',
@@ -40,13 +40,13 @@ export default class LoginDialog extends Component {
 
     //插入 dom 之后调用
     componentDidMount() {
-        this.check(".ui.form");
+        this.check(".ui.large.form");
     }
 
 
     //重新渲染后调用
     componentWillUpdate() {
-        this.check(".ui.form");
+        this.check(".ui.large.form");
     }
 
     /*注册*/
@@ -102,44 +102,48 @@ export default class LoginDialog extends Component {
     render() {
         let center = 'center';
         return (
-            <div>
-                {/*<div className="UserDialog-Wrapper">*/}
-                {/*<div className="UserDialog">*/}
-                {this.state.selectedTab === 'signIn'
-                    ? <SignInForm
-                        formData={this.state.formData}
-                        onSignIn={this.signIn.bind(this)}
-                        onChange={this.changeFormData.bind(this)}
-                        onForgotPassword={this.showForgotPassword.bind(this)}
-                        returnToSignUp={this.returnToSignUp.bind(this)}/>
-                    : this.state.selectedTab === 'signUp'
-                        ? <SignUpForm
-                            formData={this.state.formData}
-                            onChange={this.changeFormData.bind(this)}
-                            onSignUp={this.signUp.bind(this)}
-                            returnToSignIn={this.returnToSignIn.bind(this)}
-                        />
-                        : <ForgotPasswordForm
-                            formData={this.state.formData}
-                            onSubmit={this.resetPassword.bind(this)}
-                            onChange={this.changeFormData.bind(this)}
-                            returnToSignIn={this.returnToSignIn.bind(this)}/>
-                }
-                {/*</div>*/}
-
-                {/*</div>*/}
-                <div className="ui basic modal">
-                    <div className="ui icon header">
-                        <i className="remove icon"></i> 错误信息
-                    </div>
-                    <div className="content">
-                        <div className="description">
-                            <p style={{textAlign: center}}>{this.state.errorrecord}</p>
+            <div className="ui middle aligned center aligned grid">
+                <div className="column">
+                    <h2 className="ui teal image header">
+                        <img src="http://ohggtqwxx.bkt.clouddn.com/todo_list.png" className="image" alt="图标"/>
+                        <div className="content">
+                            A simple and useful todo
                         </div>
-                    </div>
-                    <div className="actions">
-                        <div className="ui green ok inverted button">
-                            知道了
+                    </h2>
+                    {this.state.selectedTab === 'signIn'
+                        ? <SignInForm
+                            formData={this.state.formData}
+                            onSignIn={this.signIn.bind(this)}
+                            onChange={this.changeFormData.bind(this)}
+                            onForgotPassword={this.showForgotPassword.bind(this)}
+                            returnToSignUp={this.returnToSignUp.bind(this)}/>
+                        : this.state.selectedTab === 'signUp'
+                            ? <SignUpForm
+                                formData={this.state.formData}
+                                onChange={this.changeFormData.bind(this)}
+                                onSignUp={this.signUp.bind(this)}
+                                returnToSignIn={this.returnToSignIn.bind(this)}
+                            />
+                            : <ForgotPasswordForm
+                                formData={this.state.formData}
+                                onSubmit={this.resetPassword.bind(this)}
+                                onChange={this.changeFormData.bind(this)}
+                                returnToSignIn={this.returnToSignIn.bind(this)}/>
+                    }
+
+                    <div className="ui basic modal">
+                        <div className="ui icon header">
+                            <i className="remove icon"></i> 错误信息
+                        </div>
+                        <div className="content">
+                            <div className="description">
+                                <p style={{textAlign: center}}>{this.state.errorrecord}</p>
+                            </div>
+                        </div>
+                        <div className="actions">
+                            <div className="ui green ok inverted button">
+                                知道了
+                            </div>
                         </div>
                     </div>
                 </div>
