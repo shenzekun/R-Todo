@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "R-Todo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,5 +17,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://shenzekun.cn/my-app/build"
+  "homepage": "http://shenzekun.cn/R-Todo/build"
 }
