@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import '../../css/UserDialog.css'
 import {signUp, signIn, sendPasswordResetEmail} from './leanCloud'
-import SignInOrSignUp from './SignInOrSignUp'
 import ForgotPasswordForm from './ForgotPasswordForm'
+import SignUpForm from './SignUpForm'
+import SignInForm from './SignInForm'
 
 import $ from 'jquery';
 
@@ -10,23 +11,23 @@ window.jQuery = $;
 require('semantic-ui/dist/semantic.min.css');
 require('semantic-ui/dist/semantic.min.js');
 
-export default class UserDialog extends Component {
+export default class LoginDialog extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'signInOrSignUp',
+            selectedTab: 'signIn',
             formData: {
                 email: '',
                 username: '',
                 password: '',
             },
             status_code: {
-                1: '请不要往同一个邮件地址发送太多邮件',
+                1: '请不要往同一个邮件地址发送太多邮件！',
                 125: '电子邮箱地址无效',
                 202: '用户名已经被占用!',
                 203: '电子邮箱地址已经被占用!',
-                204: '没有提供电子邮箱地址',
+                204: '没有提供电子邮箱地址！',
                 205: '找不到电子邮箱地址对应的用户',
                 210: '用户名和密码不匹配!',
                 211: '找不到用户!',
@@ -102,23 +103,31 @@ export default class UserDialog extends Component {
         let center = 'center';
         return (
             <div>
-                <div className="UserDialog-Wrapper">
-                    <div className="UserDialog">
-                        {this.state.selectedTab === 'signInOrSignUp'
-                            ? <SignInOrSignUp
-                                formData={this.state.formData}
-                                onSignIn={this.signIn.bind(this)}
-                                onSignUp={this.signUp.bind(this)}
-                                onChange={this.changeFormData.bind(this)}
-                                onForgotPassword={this.showForgotPassword.bind(this)}/>
-                            : <ForgotPasswordForm
-                                formData={this.state.formData}
-                                onSubmit={this.resetPassword.bind(this)}
-                                onChange={this.changeFormData.bind(this)}
-                                onSignIn={this.returnToSignIn.bind(this)}/>}
-                    </div>
+                {/*<div className="UserDialog-Wrapper">*/}
+                {/*<div className="UserDialog">*/}
+                {this.state.selectedTab === 'signIn'
+                    ? <SignInForm
+                        formData={this.state.formData}
+                        onSignIn={this.signIn.bind(this)}
+                        onChange={this.changeFormData.bind(this)}
+                        onForgotPassword={this.showForgotPassword.bind(this)}
+                        returnToSignUp={this.returnToSignUp.bind(this)}/>
+                    : this.state.selectedTab === 'signUp'
+                        ? <SignUpForm
+                            formData={this.state.formData}
+                            onChange={this.changeFormData.bind(this)}
+                            onSignUp={this.signUp.bind(this)}
+                            returnToSignIn={this.returnToSignIn.bind(this)}
+                        />
+                        : <ForgotPasswordForm
+                            formData={this.state.formData}
+                            onSubmit={this.resetPassword.bind(this)}
+                            onChange={this.changeFormData.bind(this)}
+                            returnToSignIn={this.returnToSignIn.bind(this)}/>
+                }
+                {/*</div>*/}
 
-                </div>
+                {/*</div>*/}
                 <div className="ui basic modal">
                     <div className="ui icon header">
                         <i className="remove icon"></i> 错误信息
@@ -138,15 +147,24 @@ export default class UserDialog extends Component {
         )
     }
 
+    //重置密码
     showForgotPassword() {
         let stateCopy = JSON.parse(JSON.stringify(this.state));
         stateCopy.selectedTab = 'forgotPassword';
         this.setState(stateCopy);
     }
 
+    //返回注册
+    returnToSignUp() {
+        let stateCopy = JSON.parse(JSON.stringify(this.state));
+        stateCopy.selectedTab = 'signUp';
+        this.setState(stateCopy);
+    }
+
+    //返回登录
     returnToSignIn() {
         let stateCopy = JSON.parse(JSON.stringify(this.state));
-        stateCopy.selectedTab = 'signInOrSignUp';
+        stateCopy.selectedTab = 'signIn';
         this.setState(stateCopy);
     }
 

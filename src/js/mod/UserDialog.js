@@ -11,7 +11,7 @@ export default class UserDialog extends Component {
         return (
             <div>
                 <h1>{this.props.username || '我'}的待办 {this.props.id
-                    ? <button onClick={this.isSignOut}>登出</button> : null}
+                    ? <button onClick={this.isSignOut.bind(this)}>登出</button> : null}
                 </h1>
                 <div className="inputWrapper">
                     <TodoInput

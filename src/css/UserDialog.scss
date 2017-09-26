@@ -18,6 +18,19 @@
     box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.35);
     .signInOrSignUp {
 
+      .signUp{
+        position: absolute;
+        z-index: -1000;
+        transition: all .5s;
+      }
+      .signIn{
+        position: absolute;
+        z-index: -1000;
+        transition: all .5s;
+      }
+      span{
+        margin-left: 160px;
+      }
       & > nav:first-child {
         padding: 1em;
         margin-left: -2em;

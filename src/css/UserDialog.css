@@ -17,6 +17,16 @@
     background: white;
     border: 1px solid #aaa;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.35); }
+    .UserDialog-Wrapper .UserDialog .signInOrSignUp .signUp {
+      position: absolute;
+      z-index: -1000;
+      transition: all .5s; }
+    .UserDialog-Wrapper .UserDialog .signInOrSignUp .signIn {
+      position: absolute;
+      z-index: -1000;
+      transition: all .5s; }
+    .UserDialog-Wrapper .UserDialog .signInOrSignUp span {
+      margin-left: 160px; }
     .UserDialog-Wrapper .UserDialog .signInOrSignUp > nav:first-child {
       padding: 1em;
       margin-left: -2em; }

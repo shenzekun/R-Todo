@@ -17,7 +17,7 @@ export default class ForgotPasswordForm extends Component {
                     <br/>
                     <button className="ui fluid blue submit button" type="submit">发送重置邮件</button>
                     <div className="right">
-                        <a href="#" onClick={this.props.onSignIn}>返回登录</a>
+                        <a href="#" onClick={this.props.returnToSignIn}>返回登录</a>
                     </div>
                 </form>
             </div>
