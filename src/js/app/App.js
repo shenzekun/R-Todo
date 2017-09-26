@@ -115,10 +115,8 @@ class App extends Component {
 
     /*登出*/
     signOut() {
+        document.location.reload();
         signOut();
-        setTimeout(function () {
-            document.location.reload();
-        },1000);
         let stateCopy = JSON.parse(JSON.stringify(this.state));
         stateCopy.user = {};
         this.setState(stateCopy);
