@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c8527d-96ef-4e2c-a9f2-8b491f31a920" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.0047814d.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.0047814d.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.bc682524.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.bc682524.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mod/TodoItem.js" afterPath="$PROJECT_DIR$/src/js/mod/TodoItem.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/static/js/main.50498111.js.map" afterPath="$PROJECT_DIR$/build/static/js/main.50498111.js.map" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -57,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/mod/TodoItem.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="194">
-              <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -224,42 +220,6 @@
             <path>
               <item name="R-Todo" type="b2602c69:ProjectViewProjectNode" />
               <item name="R-Todo" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="R-Todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="R-Todo" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="R-Todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="R-Todo" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="main.28c2d7be.css" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="R-Todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="R-Todo" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="R-Todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="R-Todo" type="462c0819:PsiDirectoryNode" />
-              <item name="build" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="main.50498111.js" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="R-Todo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="R-Todo" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -358,7 +318,7 @@
       <workItem from="1506248109459" duration="6720000" />
       <workItem from="1506407147037" duration="17571000" />
       <workItem from="1506470507457" duration="1891000" />
-      <workItem from="1506512874861" duration="37612000" />
+      <workItem from="1506512874861" duration="37771000" />
     </task>
     <task id="LOCAL-00001" summary="format all file">
       <created>1505786252163</created>
@@ -511,7 +471,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138145000" />
+    <option name="totallyTimeSpent" value="138304000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -978,7 +938,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/mod/TodoItem.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
