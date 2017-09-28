@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TodoInput from '../mod/TodoInput'
+import TodoInput from './TodoInput'
 import '../../css/UserDialog.css'
 import $ from 'jquery';
 
@@ -13,12 +13,11 @@ export default class UserDialog extends Component {
             <div className="user-todo">
                 <h1>{this.props.username || '我'}的待办 {this.props.id
                     ? <button onClick={this.isSignOut.bind(this)} className="ui circular twitter icon button"
-                              style={{marginLeft: '11.4em'}}>
+                              >
                         <i className="sign out icon"></i></button> : null}
                 </h1>
                 <div className="inputWrapper">
-                    <TodoInput
-                        content={this.props.newTodo}
+                    <TodoInput content={this.props.newTodo}
                         onChange={this.props.changeTitle}
                         onSubmit={this.props.addTodo}/>
                 </div>

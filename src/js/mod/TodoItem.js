@@ -3,7 +3,7 @@ import '../../css/TodoItem.css'
 import $ from 'jquery';
 
 window.jQuery = $;
-
+require('semantic-ui/dist/semantic.min.css');
 export default class TodoItem extends Component {
     render() {
         return (
@@ -15,7 +15,10 @@ export default class TodoItem extends Component {
                 </div>
                 {this.props.todo.status === 'completed'
                     ? <span className="title completed">{this.props.todo.title}</span>
-                    : <span className="title">{this.props.todo.title}</span>
+                    : <div className="ui transparent input title">
+                        <input type="text" value={this.props.todo.title}
+                               onChange={this.change.bind(this)} onBlur={this.update.bind(this)}/>
+                    </div>
                 }
                 <button className="ui circular google plus icon button" onClick={this.delete.bind(this)}>
                     <i className="remove icon"></i>
@@ -24,7 +27,12 @@ export default class TodoItem extends Component {
             </div>
         )
     }
-
+    change(e){
+        this.props.onChange(e,this.props.todo,e.target.value);
+    }
+    update(e) {
+        this.props.onUpdate(e, this.props.todo, e.target.value);
+    }
 
     toggle(e) {
         this.props.onToggle(e, this.props.todo)

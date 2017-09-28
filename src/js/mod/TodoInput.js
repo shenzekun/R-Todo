@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import '../../css/TodoInput.css'
 
 function submit(props, e) {
@@ -14,14 +14,16 @@ function changeTitle(props, e) {
 }
 
 
-export default function (props) {
-    return (
-        <div className="field">
-            <div className="ui icon input TodoInput">
-                <input type="text" value={props.content} onChange={changeTitle.bind(null, props)}
-                       onKeyPress={submit.bind(null, props)} placeholder="输入你的Todo"/>
-                <i className="reply icon"></i>
+export default class TodoInput extends Component {
+    render() {
+        return (
+            <div className="field">
+                <div className="ui icon input TodoInput">
+                    <input type="text" value={this.props.content} onChange={changeTitle.bind(null, this.props)}
+                           onKeyPress={submit.bind(null, this.props)} placeholder="输入你的Todo"/>
+                    <i className="reply icon"></i>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }

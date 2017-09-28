@@ -31,8 +31,13 @@ class App extends Component {
     render() {
         let todos = this.state.todoList.filter((item) => !item.deleted).map((item, index) => {
             return (
-                <li key={index}><TodoItem todo={item} onToggle={this.toggle.bind(this)}
-                                          onDelete={this.delete.bind(this)}/></li>
+                <li key={index}>
+                    <TodoItem todo={item}
+                              onToggle={this.toggle.bind(this)}
+                              onDelete={this.delete.bind(this)}
+                              onUpdate={this.update.bind(this)}
+                              onChange={this.change.bind(this)}/>
+                </li>
             )
         });
         return (
@@ -55,6 +60,28 @@ class App extends Component {
     }
 
     componentDidUpdate() {
+    }
+
+    change(e, todo, todoTitle) {
+        if (todo.status === '') {
+            todo.title = todoTitle;
+            this.setState(this.state);
+        }
+    }
+
+    update(e, todo, todoTitle) {
+        if (todo.status === '') {
+            let oldStatus = todo.status;
+            todo.title = todoTitle;
+            this.setState(this.state);
+            TodoModel.update(todo, () => {
+                this.setState(this.state)
+            }, (error) => {
+                console.log(error);
+                todo.status = oldStatus;
+                this.setState(this.state)
+            });
+        }
     }
 
     toggle(e, todo) {
