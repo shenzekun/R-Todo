@@ -1,24 +1,13 @@
-.UserDialog-Wrapper {
-  /*全屏*/
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: hsla(0, 0%, 0%, 0.40);
-  .UserDialog {
-    border: 1px solid;
-    border-radius: 4px;
-    min-width: 32em;
-    background: white;
-    border: 1px solid #aaa;
-    box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.35);
-  }
+.user-todo {
+  min-width: 30em;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, .6);
+  padding: 1em;
+  border-radius: 4px;
 }
 
+.sign-up-right {
+  margin-left: 11.5em;
+}
 
 
 

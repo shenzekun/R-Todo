@@ -5,7 +5,7 @@ export default class ForgotPasswordForm extends Component {
     render() {
         return (
             <div>
-                <form className="ui form" onSubmit={this.props.onSubmit}>
+                <form className="ui large form" onSubmit={this.props.onSubmit}>
                     <div className="ui stacked segment">
                         <div className="field">
                             <label>邮箱</label>

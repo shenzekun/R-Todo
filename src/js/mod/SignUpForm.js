@@ -32,7 +32,7 @@ export default class ForgotPasswordForm extends Component {
                     <div className="ui error message"></div>
                 </form>
                 <div className="ui message">
-                    New to us? <a href="javascript:void(0)" onClick={this.props.returnToSignIn}>返回登录</a>
+                    <a href="javascript:void(0)" onClick={this.props.returnToSignIn}>返回登录</a>
                 </div>
             </div>
         )

@@ -4,7 +4,7 @@ export default class ForgotPasswordForm extends Component {
     render() {
         return (
             <div>
-                <form className="ui form" onSubmit={this.props.onSignIn}>
+                <form className="ui large form" onSubmit={this.props.onSignIn}>
                     <div className="ui stacked segment">
                         <div className="field">
                             <div className="ui left icon input">
@@ -26,8 +26,8 @@ export default class ForgotPasswordForm extends Component {
                     <div className="ui error message"></div>
                 </form>
                 <div className="ui message">
-                    New to us? <a href="javascript:void(0)" onClick={this.props.onForgotPassword}>忘记密码了?</a>
-                    <a href="javascript:void(0)" onClick={this.props.returnToSignUp}>注册？</a>
+                    <a href="javascript:void(0)" onClick={this.props.returnToSignUp}>注册</a>&nbsp;or&nbsp;
+                    <a href="javascript:void(0)" onClick={this.props.onForgotPassword}>找回密码</a>
                 </div>
             </div>
         )

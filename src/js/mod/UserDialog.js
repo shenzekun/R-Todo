@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import TodoInput from '../mod/TodoInput'
+import '../../css/UserDialog.css'
 import $ from 'jquery';
 
 window.jQuery = $;
@@ -9,9 +10,11 @@ require('semantic-ui/dist/semantic.min.js');
 export default class UserDialog extends Component {
     render() {
         return (
-            <div>
+            <div className="user-todo">
                 <h1>{this.props.username || '我'}的待办 {this.props.id
-                    ? <button onClick={this.isSignOut.bind(this)}>登出</button> : null}
+                    ? <button onClick={this.isSignOut.bind(this)} className="ui circular twitter icon button"
+                              style={{marginLeft: '11.4em'}}>
+                        <i className="sign out icon"></i></button> : null}
                 </h1>
                 <div className="inputWrapper">
                     <TodoInput
@@ -23,6 +26,7 @@ export default class UserDialog extends Component {
                     {this.props.todos}
                 </ol>
 
+                {/*询问是否退出模态框*/}
                 <div className="ui small modal">
                     <div className="header">
                         <i className="sign warning icon"></i>
@@ -47,6 +51,7 @@ export default class UserDialog extends Component {
         )
     }
 
+    //弹出是否退出模态框
     isSignOut() {
         $('.ui.small.modal').modal('show');
     }

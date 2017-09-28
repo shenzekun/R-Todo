@@ -1,20 +1,15 @@
-//.App {
-//  color: #333;
-//  border: 1px solid #aaa;
-//  border-radius: 4px;
-//  background: white;
-//  margin: 2em;
-//  position: relative;
-//  min-height: 20em;
-//  min-width: 32em;
-//  box-shadow: 0 0 1em hsla(0, 0%, 0%, 0.15);
-//  .inputWrapper{
-//    padding: 0 2em;
-//  }
-//
-//}
+.App {
+  margin: 2em;
+  position: relative;
+  min-height: 20em;
+  min-width: 30em;
+  .inputWrapper {
+    padding: 0 1em;
+  }
 
-.right{
+}
+
+.right {
   text-align: right;
   margin-top: 8px;
 }

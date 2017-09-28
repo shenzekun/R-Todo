@@ -1,9 +1,13 @@
 .TodoItem {
   padding: .5em;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  border-bottom: 1px solid #eee; }
   .TodoItem .title {
     flex-grow: 1;
     padding: 0 .5em; }
+  .TodoItem .completed {
+    text-decoration: line-through;
+    color: #ccc; }
 
 /*# sourceMappingURL=TodoItem.css.map */

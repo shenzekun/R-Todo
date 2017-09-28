@@ -34,7 +34,7 @@ export default class LoginDialog extends Component {
                 219: '登录失败次数超过限制，请稍候再试，或者通过忘记密码重设密码!',
                 unknown: '请求失败，请稍后再试!'
             },
-            errorrecord: ''
+            error_record: ''
         }
     }
 
@@ -83,13 +83,13 @@ export default class LoginDialog extends Component {
         if (!this.state.formData.username || !this.state.formData.password) {
             return false;
         }
-        signIn(username, password, success, error)
+        signIn(username, password, success, error);
     }
 
     //获取错误信息
     getErrorMessage(code) {
         let stateCopy = JSON.parse(JSON.stringify(this.state));
-        stateCopy.errorrecord = this.state.status_code[code] || this.state.status_code.unknown;
+        stateCopy.error_record = this.state.status_code[code] || this.state.status_code.unknown;
         this.setState(stateCopy);
     }
 
@@ -105,8 +105,8 @@ export default class LoginDialog extends Component {
             <div className="ui middle aligned center aligned grid">
                 <div className="column">
                     <h2 className="ui teal image header">
-                        <img src="http://ohggtqwxx.bkt.clouddn.com/todo_list.png" className="image" alt="图标"/>
-                        <div className="content">
+                        <img src="http://ohggtqwxx.bkt.clouddn.com/todo.png" className="image" alt="图标"/>
+                        <div className="content addFont">
                             A simple and useful todo
                         </div>
                     </h2>
@@ -137,7 +137,7 @@ export default class LoginDialog extends Component {
                         </div>
                         <div className="content">
                             <div className="description">
-                                <p style={{textAlign: center}}>{this.state.errorrecord}</p>
+                                <p style={{textAlign: center}}>{this.state.error_record}</p>
                             </div>
                         </div>
                         <div className="actions">
@@ -183,6 +183,10 @@ export default class LoginDialog extends Component {
             this.getErrorMessage(error.code);
             $('.ui.basic.modal').modal('show');
         };
+        /*邮件没有输入的时候不发出请求*/
+        if (!this.state.formData.email) {
+            return false;
+        }
         sendPasswordResetEmail(this.state.formData.email, success, error);
     }
 

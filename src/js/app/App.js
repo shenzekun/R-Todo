@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import '../../css/App.css';
-import '../../css/index.css'
+import '../../css/reset.css'
 import TodoItem from '../../js/mod/TodoItem'
 import LoginDialog from '../mod/LoginDialog'
 import UserDialog from '../mod/UserDialog'
 import {getCurrentUser, signOut, TodoModel} from '../../js/mod/leanCloud'
-
 import $ from 'jquery';
 
 window.jQuery = $;
@@ -119,7 +118,6 @@ class App extends Component {
     /*登出*/
     signOut() {
         $('.ui.small.modal').modal('hide');
-        document.location.reload();
         signOut();
         let stateCopy = JSON.parse(JSON.stringify(this.state));
         stateCopy.user = {};

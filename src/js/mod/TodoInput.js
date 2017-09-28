@@ -17,7 +17,7 @@ function changeTitle(props, e) {
 export default function (props) {
     return (
         <div className="field">
-            <div className="ui right icon input TodoInput">
+            <div className="ui icon input TodoInput">
                 <input type="text" value={props.content} onChange={changeTitle.bind(null, props)}
                        onKeyPress={submit.bind(null, props)} placeholder="输入你的Todo"/>
                 <i className="reply icon"></i>

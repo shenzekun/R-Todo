@@ -1,3 +1,11 @@
+.App {
+  margin: 2em;
+  position: relative;
+  min-height: 20em;
+  min-width: 30em; }
+  .App .inputWrapper {
+    padding: 0 1em; }
+
 .right {
   text-align: right;
   margin-top: 8px; }
