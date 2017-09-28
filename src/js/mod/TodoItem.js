@@ -15,7 +15,9 @@ export default class TodoItem extends Component {
                 </div>
                 <div className={this.props.todo.id}>
                     {this.props.todo.status === 'completed'
-                        ? <span className="completed title-through">{this.props.todo.title}</span>
+                        ? <div className="ui transparent input title completed">
+                            <input type="text" value={this.props.todo.title} disabled/>
+                        </div>
                         : <div className="ui transparent input title">
                             <input type="text" value={this.props.todo.title}
                                    onChange={this.change.bind(this)} onBlur={this.update.bind(this)}/>
