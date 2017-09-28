@@ -14,6 +14,7 @@ export default class TodoItem extends Component {
                     <label></label>
                 </div>
                 <div className={this.props.todo.id}>
+                    {/*判断是否完成了*/}
                     {this.props.todo.status === 'completed'
                         ? <div className="ui transparent input title completed">
                             <input type="text" value={this.props.todo.title} disabled/>
