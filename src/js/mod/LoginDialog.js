@@ -73,7 +73,7 @@ export default class LoginDialog extends Component {
         e.preventDefault();
         let {username, password} = this.state.formData;
         let success = (user) => {
-            this.props.onSignIn.call(null, user)
+            this.props.onSignIn.call(null, user);
         };
         let error = (error) => {
             console.log(error);

@@ -13,23 +13,26 @@ export default class TodoItem extends Component {
                            onChange={this.toggle.bind(this)}/>
                     <label></label>
                 </div>
-                {this.props.todo.status === 'completed'
-                    ? <span className="title completed">{this.props.todo.title}</span>
-                    : <div className="ui transparent input title">
-                        <input type="text" value={this.props.todo.title}
-                               onChange={this.change.bind(this)} onBlur={this.update.bind(this)}/>
-                    </div>
-                }
-                <button className="ui circular google plus icon button" onClick={this.delete.bind(this)}>
-                    <i className="remove icon"></i>
-                </button>
-
+                <div className={this.props.todo.id}>
+                    {this.props.todo.status === 'completed'
+                        ? <span className="completed title-through">{this.props.todo.title}</span>
+                        : <div className="ui transparent input title">
+                            <input type="text" value={this.props.todo.title}
+                                   onChange={this.change.bind(this)} onBlur={this.update.bind(this)}/>
+                        </div>
+                    }
+                    <button className="ui circular google plus icon button" onClick={this.delete.bind(this)}>
+                        <i className="remove icon"></i>
+                    </button>
+                </div>
             </div>
         )
     }
-    change(e){
-        this.props.onChange(e,this.props.todo,e.target.value);
+
+    change(e) {
+        this.props.onChange(e, this.props.todo, e.target.value);
     }
+
     update(e) {
         this.props.onUpdate(e, this.props.todo, e.target.value);
     }
@@ -39,6 +42,6 @@ export default class TodoItem extends Component {
     }
 
     delete(e) {
-        this.props.onDelete(e, this.props.todo)
+        this.props.onDelete(e, this.props.todo);
     }
 }

@@ -53,13 +53,16 @@ class App extends Component {
                     />
                     : <LoginDialog
                         onSignUp={this.onSignUpOrSignIn.bind(this)}
-                        onSignIn={this.onSignUpOrSignIn.bind(this)}/>}
+                        onSignIn={this.onSignUpOrSignIn.bind(this)}
+                    />
+                }
 
             </div>
         )
     }
 
-    componentDidUpdate() {
+    componentWillUpdate() {
+
     }
 
     /*监控TodoItem的变化*/
@@ -102,7 +105,8 @@ class App extends Component {
     delete(e, todo) {
         TodoModel.destroy(todo.id, () => {
             todo.deleted = true;
-            this.setState(this.state)
+            $("."+todo.id).transition("scale");
+            setTimeout(()=>this.setState(this.state),300);
         }, (error) => {
             console.log(error);
         })
@@ -126,7 +130,12 @@ class App extends Component {
             this.setState({
                 newTodo: '',
                 todoList: this.state.todoList
-            })
+            });
+            $("."+newTodo.id).transition({
+                animation : 'pulse',
+                reverse   : true,
+                interval  : 200
+            });
         }, (error) => {
             console.log(error);
         })
@@ -139,7 +148,7 @@ class App extends Component {
     }
 
     onSignUpOrSignIn(user) {
-        let stateCopy = JSON.parse(JSON.stringify(this.state));
+        let stateCopy = JSON.parse(JSON.stringify(this.state));//深拷贝
         stateCopy.user = user;
         this.setState(stateCopy)
     }

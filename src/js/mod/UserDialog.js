@@ -9,11 +9,11 @@ require('semantic-ui/dist/semantic.min.js');
 
 export default class UserDialog extends Component {
     render() {
+
         return (
             <div className="user-todo">
                 <h1>{this.props.username || '我'}的待办 {this.props.id
-                    ? <button onClick={this.isSignOut.bind(this)} className="ui circular twitter icon button"
-                              >
+                    ? <button onClick={this.isSignOut.bind(this)} className="ui circular twitter icon button sign-up-right">
                         <i className="sign out icon"></i></button> : null}
                 </h1>
                 <div className="inputWrapper">
@@ -37,7 +37,7 @@ export default class UserDialog extends Component {
                         </div>
                     </div>
                     <div className="actions">
-                        <div className="ui black deny button">
+                        <div className="ui black deny button" onClick={this.close.bind(this)}>
                             取消
                         </div>
                         <div className="ui positive right labeled icon button" onClick={this.props.signOut}>
@@ -49,8 +49,11 @@ export default class UserDialog extends Component {
             </div>
         )
     }
-
-    //弹出是否退出模态框
+    //取消弹窗
+    close(){
+        $('.ui.small.modal').modal('hide');
+    }
+    //弹出是否弹窗模态框
     isSignOut() {
         $('.ui.small.modal').modal('show');
     }

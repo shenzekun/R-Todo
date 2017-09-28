@@ -1,10 +1,12 @@
 .user-todo {
   min-width: 30em;
-  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 5px 5px 5px rgba(0, 0, 0, 0.6);
   padding: 1em;
   border-radius: 4px; }
-
-.sign-up-right {
-  margin-left: 11.5em; }
+  .user-todo .todoList {
+    height: 35em;
+    overflow: auto; }
+  .user-todo .sign-up-right {
+    margin-left: 11.4em; }
 
 /*# sourceMappingURL=UserDialog.css.map */

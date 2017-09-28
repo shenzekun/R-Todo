@@ -117,7 +117,7 @@ export function signUp(email, username, password, successFn, errorFn) {
 
 export function sendPasswordResetEmail(email, successFn, errorFn) {
     AV.User.requestPasswordReset(email).then(function (success) {
-        successFn.call(null,success);
+        successFn.call(null, success);
     }, function (error) {
         errorFn.call(null, error)
     })

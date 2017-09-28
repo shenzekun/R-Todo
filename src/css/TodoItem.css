@@ -3,7 +3,10 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #eee; }
+  .TodoItem .title-through {
+    padding: 0 273px 0 10px; }
   .TodoItem .title {
+    width: 312px;
     flex-grow: 1;
     padding: 0 .5em; }
   .TodoItem .completed {

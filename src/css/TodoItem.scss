@@ -4,7 +4,11 @@
   align-items: center;
   border-bottom: 1px solid #eee;
 
+  .title-through{
+    padding:0 273px 0 10px;
+  }
   .title {
+    width: 312px;
     flex-grow: 1;
     padding: 0 .5em;
   }
