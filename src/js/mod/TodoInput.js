@@ -20,7 +20,7 @@ export default class TodoInput extends Component {
             <div className="field">
                 <div className="ui icon input TodoInput">
                     <input type="text" value={this.props.content} onChange={changeTitle.bind(null, this.props)}
-                           onKeyPress={submit.bind(null, this.props)} placeholder="输入你的Todo"/>
+                           onKeyPress={submit.bind(null, this.props)} placeholder="输入你的Todo，并按回车键"/>
                     <i className="reply icon"></i>
                 </div>
             </div>

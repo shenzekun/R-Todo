@@ -62,6 +62,7 @@ class App extends Component {
     componentDidUpdate() {
     }
 
+    /*监控TodoItem的变化*/
     change(e, todo, todoTitle) {
         if (todo.status === '') {
             todo.title = todoTitle;
@@ -69,6 +70,7 @@ class App extends Component {
         }
     }
 
+    /*更新TodoItem*/
     update(e, todo, todoTitle) {
         if (todo.status === '') {
             let oldStatus = todo.status;
@@ -131,7 +133,7 @@ class App extends Component {
     }
 
 
-    /*监听输入框的变化*/
+    /*监听大输入框的变化*/
     changeTitle(event) {
         this.setState({newTodo: event.target.value, todoList: this.state.todoList})
     }
