@@ -2,18 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c8527d-96ef-4e2c-a9f2-8b491f31a920" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/static/css/main.09c078d9.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/static/css/main.09c078d9.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/static/js/main.71770922.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/static/js/main.71770922.js.map" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/css/main.c0ea86e0.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/css/main.c0ea86e0.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.7554373c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.7554373c.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/TodoItem.css" afterPath="$PROJECT_DIR$/src/css/TodoItem.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/TodoItem.scss" afterPath="$PROJECT_DIR$/src/css/TodoItem.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.css" afterPath="$PROJECT_DIR$/src/css/UserDialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.css.map" afterPath="$PROJECT_DIR$/src/css/UserDialog.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.scss" afterPath="$PROJECT_DIR$/src/css/UserDialog.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/app/App.js" afterPath="$PROJECT_DIR$/src/js/app/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mod/ForgotPasswordForm.js" afterPath="$PROJECT_DIR$/src/js/mod/ForgotPasswordForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mod/SignInForm.js" afterPath="$PROJECT_DIR$/src/js/mod/SignInForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mod/SignUpForm.js" afterPath="$PROJECT_DIR$/src/js/mod/SignUpForm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mod/UserDialog.js" afterPath="$PROJECT_DIR$/src/js/mod/UserDialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/js/mod/leanCloud.js" afterPath="$PROJECT_DIR$/src/js/mod/leanCloud.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/asset-manifest.json" afterPath="$PROJECT_DIR$/build/asset-manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/service-worker.js" afterPath="$PROJECT_DIR$/build/service-worker.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +31,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/mod/UserDialog.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
-              <caret line="15" column="67" lean-forward="true" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+              <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/css/TodoItem.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+              <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -63,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/app/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1653">
-              <caret line="94" column="12" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+              <caret line="94" column="12" lean-forward="false" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -73,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/mod/LoginDialog.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-102">
-              <caret line="131" column="21" lean-forward="true" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+              <caret line="131" column="21" lean-forward="false" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -83,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/mod/SignInForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+              <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -113,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/src/js/mod/ForgotPasswordForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+              <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -380,7 +380,7 @@
       <workItem from="1506407147037" duration="17571000" />
       <workItem from="1506470507457" duration="1891000" />
       <workItem from="1506512874861" duration="37897000" />
-      <workItem from="1506656578469" duration="9895000" />
+      <workItem from="1506656578469" duration="10205000" />
     </task>
     <task id="LOCAL-00001" summary="format all file">
       <created>1505786252163</created>
@@ -543,11 +543,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506661727354</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="增加通知用户完成多少数记录过程">
+      <created>1506695183929</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1506695183929</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148325000" />
+    <option name="totallyTimeSpent" value="148635000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -613,7 +620,8 @@
     <MESSAGE value="新增动画" />
     <MESSAGE value="修复样式" />
     <MESSAGE value="美化页面" />
-    <option name="LAST_COMMIT_MESSAGE" value="美化页面" />
+    <MESSAGE value="增加通知用户完成多少数记录过程" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加通知用户完成多少数记录过程" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -900,7 +908,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/mod/SignInForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+          <caret line="20" column="34" lean-forward="false" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -924,7 +932,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/mod/ForgotPasswordForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="21" column="23" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <caret line="21" column="23" lean-forward="false" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -932,7 +940,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/mod/LoginDialog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
-          <caret line="131" column="21" lean-forward="true" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
+          <caret line="131" column="21" lean-forward="false" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -940,7 +948,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/mod/UserDialog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
-          <caret line="15" column="67" lean-forward="true" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
+          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -958,7 +966,7 @@
     <entry file="file://$PROJECT_DIR$/src/css/TodoItem.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -966,7 +974,7 @@
     <entry file="file://$PROJECT_DIR$/src/js/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1653">
-          <caret line="94" column="12" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+          <caret line="94" column="12" lean-forward="false" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
           <folding />
         </state>
       </provider>
