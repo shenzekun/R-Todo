@@ -1,13 +1,25 @@
 .user-todo {
   min-width: 30em;
-  box-shadow: 3px 5px 5px 5px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.6);
   padding: 1em;
   border-radius: 4px;
   background-color: #fff; }
+  .user-todo .prompt-complete-count {
+    position: absolute;
+    top: 32px;
+    left: 36px;
+    width: 20px;
+    height: 20px;
+    background: wheat;
+    text-align: center;
+    border-radius: 50%; }
   .user-todo .todoList {
-    height: 35em;
-    overflow: auto; }
+    height: 33em;
+    overflow: auto;
+    margin-right: -14px; }
   .user-todo .sign-up-right {
-    margin-left: 11.4em; }
+    position: absolute;
+    top: 18px;
+    right: 24px; }
 
 /*# sourceMappingURL=UserDialog.css.map */

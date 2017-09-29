@@ -16,14 +16,16 @@ class App extends Component {
         this.state = {
             user: getCurrentUser() || {},
             newTodo: '',
-            todoList: []
+            todoList: [],
+            completeCount: 0
         };
         let user = getCurrentUser();
         if (user) {
             TodoModel.getByUser(user, (todos) => {
                 let stateCopy = JSON.parse(JSON.stringify(this.state));
                 stateCopy.todoList = todos;
-                this.setState(stateCopy)
+                stateCopy.completeCount = stateCopy.todoList.filter((item) => item.status === 'completed').length;
+                this.setState(stateCopy);
             })
         }
     }
@@ -50,6 +52,7 @@ class App extends Component {
                                   id={this.state.user.id}
                                   signOut={this.signOut.bind(this)}
                                   newTodo={this.state.newTodo}
+                                  completeCount={this.state.completeCount}
                     />
                     : <LoginDialog
                         onSignUp={this.onSignUpOrSignIn.bind(this)}
@@ -89,24 +92,43 @@ class App extends Component {
         }
     }
 
+    /*todo完成的复选框的转换处理*/
     toggle(e, todo) {
         let oldStatus = todo.status;
-        todo.status = (todo.status === 'completed' ? '' : 'completed');
+        let isCompleted = (todo.status === 'completed');
+        todo.status = (isCompleted ? '' : 'completed');//如果isCompleted为false，那么todo.status为''，否则为completed
         TodoModel.update(todo, () => {
-            this.setState(this.state)
+            this.setState(this.state);
+            //如果完成了，完成度加1
+            if (!isCompleted) {
+                this.setState({
+                    completeCount: ++this.state.completeCount
+                })
+            } else {
+                this.setState({
+                    completeCount: --this.state.completeCount
+                })
+            }
         }, (error) => {
             console.log(error);
             todo.status = oldStatus;
-            this.setState(this.state)
+            this.setState(this.state);
         })
     }
 
     /*删除todo*/
     delete(e, todo) {
+        let isComplete = (todo.status === 'completed');
         TodoModel.destroy(todo.id, () => {
             todo.deleted = true;
-            $("."+todo.id).transition("scale");
-            setTimeout(()=>this.setState(this.state),300);
+            $("." + todo.id).transition("scale");
+            setTimeout(() => this.setState(this.state), 300);
+            //如果完成了,删除，完成度减一
+            if (isComplete) {
+                setTimeout(() => this.setState({
+                    completeCount: --this.state.completeCount
+                }), 300);
+            }
         }, (error) => {
             console.log(error);
         })
@@ -131,10 +153,10 @@ class App extends Component {
                 newTodo: '',
                 todoList: this.state.todoList
             });
-            $("."+newTodo.id).transition({
-                animation : 'pulse',
-                reverse   : true,
-                interval  : 200
+            $("." + newTodo.id).transition({
+                animation: 'pulse',
+                reverse: true,
+                interval: 200
             });
         }, (error) => {
             console.log(error);

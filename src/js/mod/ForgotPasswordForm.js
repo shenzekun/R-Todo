@@ -15,7 +15,7 @@ export default class ForgotPasswordForm extends Component {
                                 <i className="mail icon"></i>
                             </div>
                         </div>
-                        <button className="ui fluid blue submit button" type="submit">发送重置邮件</button>
+                        <button className="ui fluid teal submit button" type="submit">发送重置邮件</button>
                     </div>
 
                     <div className="ui error message"></div>

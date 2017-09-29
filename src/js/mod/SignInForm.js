@@ -20,7 +20,7 @@ export default class ForgotPasswordForm extends Component {
                                        onChange={this.props.onChange.bind(null, 'password')} placeholder="密码"/>
                             </div>
                         </div>
-                        <button className="ui fluid blue submit button" type="submit">登录</button>
+                        <button className="ui fluid teal submit button" type="submit">登录</button>
                     </div>
 
                     <div className="ui error message"></div>

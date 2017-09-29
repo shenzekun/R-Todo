@@ -12,14 +12,20 @@ export default class UserDialog extends Component {
 
         return (
             <div className="user-todo">
-                <h1>{this.props.username || '我'}的待办 {this.props.id
-                    ? <button onClick={this.isSignOut.bind(this)} className="ui circular twitter icon button sign-up-right">
-                        <i className="sign out icon"></i></button> : null}
-                </h1>
+                <div>
+                    <h1><i className="alarm outline icon"></i></h1>
+                    <span className="prompt-complete-count">{this.props.completeCount}</span>
+                    {this.props.id
+                        ? <button onClick={this.isSignOut.bind(this)}
+                                  className="ui circular twitter icon button sign-up-right">
+                            <i className="sign out icon"></i></button> : null
+                    }
+
+                </div>
                 <div className="inputWrapper">
                     <TodoInput content={this.props.newTodo}
-                        onChange={this.props.changeTitle}
-                        onSubmit={this.props.addTodo}/>
+                               onChange={this.props.changeTitle}
+                               onSubmit={this.props.addTodo}/>
                 </div>
                 <ol className="todoList">
                     {this.props.todos}
@@ -49,10 +55,12 @@ export default class UserDialog extends Component {
             </div>
         )
     }
+
     //取消弹窗
-    close(){
+    close() {
         $('.ui.small.modal').modal('hide');
     }
+
     //弹出是否弹窗模态框
     isSignOut() {
         $('.ui.small.modal').modal('show');
