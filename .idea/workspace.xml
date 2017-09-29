@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c8527d-96ef-4e2c-a9f2-8b491f31a920" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/css/main.28c2d7be.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/css/main.28c2d7be.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.50498111.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.50498111.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.css" afterPath="$PROJECT_DIR$/src/css/UserDialog.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.css.map" afterPath="$PROJECT_DIR$/src/css/UserDialog.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.scss" afterPath="$PROJECT_DIR$/src/css/UserDialog.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/index.css" afterPath="$PROJECT_DIR$/src/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/index.css.map" afterPath="$PROJECT_DIR$/src/css/index.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/index.scss" afterPath="$PROJECT_DIR$/src/css/index.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/asset-manifest.json" afterPath="$PROJECT_DIR$/build/asset-manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/service-worker.js" afterPath="$PROJECT_DIR$/build/service-worker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,11 +36,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDialog.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDialog.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/UserDialog.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
               <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -90,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/src/css/index.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+              <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -100,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/src/css/LoginDialog.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="114">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -112,18 +124,6 @@
             <state relative-caret-position="38">
               <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/app/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1919">
-              <caret line="108" column="54" lean-forward="false" selection-start-line="108" selection-start-column="54" selection-end-line="108" selection-end-column="54" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -197,7 +197,6 @@
         <option value="$PROJECT_DIR$/src/css/TodoInput.scss" />
         <option value="$PROJECT_DIR$/src/js/mod/TodoInput.js" />
         <option value="$PROJECT_DIR$/src/js/mod/leanCloud.js" />
-        <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/js/mod/LoginDialog.js" />
         <option value="$PROJECT_DIR$/src/js/mod/UserDialog.js" />
@@ -207,6 +206,7 @@
         <option value="$PROJECT_DIR$/src/css/index.scss" />
         <option value="$PROJECT_DIR$/src/css/App.scss" />
         <option value="$PROJECT_DIR$/src/css/UserDialog.scss" />
+        <option value="$PROJECT_DIR$/src/index.js" />
       </list>
     </option>
   </component>
@@ -381,7 +381,7 @@
       <workItem from="1506407147037" duration="17571000" />
       <workItem from="1506470507457" duration="1891000" />
       <workItem from="1506512874861" duration="37897000" />
-      <workItem from="1506656578469" duration="561000" />
+      <workItem from="1506656578469" duration="867000" />
     </task>
     <task id="LOCAL-00001" summary="format all file">
       <created>1505786252163</created>
@@ -530,11 +530,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506611165726</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="美化页面">
+      <created>1506661301655</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1506661301655</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138991000" />
+    <option name="totallyTimeSpent" value="139297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -596,11 +603,11 @@
     <MESSAGE value="修改package.json" />
     <MESSAGE value="修改md" />
     <MESSAGE value="修改app.js" />
-    <MESSAGE value="美化页面" />
     <MESSAGE value="新增可编辑功能" />
     <MESSAGE value="新增动画" />
     <MESSAGE value="修复样式" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复样式" />
+    <MESSAGE value="美化页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="美化页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -651,6 +658,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -758,6 +766,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -829,19 +838,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1919">
           <caret line="108" column="54" lean-forward="false" selection-start-line="108" selection-start-column="54" selection-end-line="108" selection-end-column="54" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -876,7 +878,7 @@
     <entry file="file://$PROJECT_DIR$/src/css/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -884,7 +886,7 @@
     <entry file="file://$PROJECT_DIR$/src/css/LoginDialog.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -945,6 +947,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="25" lean-forward="false" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
           <folding />
         </state>
       </provider>
