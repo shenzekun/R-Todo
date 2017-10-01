@@ -108,7 +108,7 @@ export default class LoginDialog extends Component {
                     <h2 className="ui teal image header">
                         <img src="http://ohggtqwxx.bkt.clouddn.com/todo.png" className="image" alt="图标"/>
                         <div className="content addFont">
-                            A simple and useful TodoList
+                            A simple and pithy TodoList
                         </div>
                     </h2>
                     {this.state.selectedTab === 'signIn'
