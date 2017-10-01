@@ -65,13 +65,6 @@ class App extends Component {
     }
 
     componentDidMount() {
-        console.log("1");
-        TodoModel.getByUser(getCurrentUser(), (todos) => {
-            let stateCopy = JSON.parse(JSON.stringify(this.state));
-            stateCopy.todoList = todos;
-            stateCopy.completeCount = stateCopy.todoList.filter((item) => item.status === 'completed').length;
-            this.setState(stateCopy);
-        });
     }
 
     /*监控TodoItem的变化*/

@@ -61,9 +61,16 @@ export default class LoginDialog extends Component {
             this.getErrorMessage(error.code);
             $('.ui.basic.modal').modal('show');
         };
-        if (!this.state.formData.username || !this.state.formData.password || !this.state.formData.email) {
+        if (!username || !password || !email) {
             return false;
         }
+        if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(email)) {
+            return false;
+        }
+        if (!/^\w{6,}$/.test(password)) {
+            return false;
+        }
+        
         /*leanCloud.js*/
         signUp(email, username, password, success, error);
     }
@@ -80,7 +87,10 @@ export default class LoginDialog extends Component {
             this.getErrorMessage(error.code);
             $('.ui.basic.modal').modal('show');
         };
-        if (!this.state.formData.username || !this.state.formData.password) {
+        if (!username || !password) {
+            return false;
+        }
+        if (!/^\w{6,}$/.test(password)) {
             return false;
         }
         signIn(username, password, success, error);
@@ -188,6 +198,10 @@ export default class LoginDialog extends Component {
         };
         /*邮件没有输入的时候不发出请求*/
         if (!this.state.formData.email) {
+            return false;
+        }
+        /*邮箱格式错误不发出请求*/
+        if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(this.state.formData.email)) {
             return false;
         }
         sendPasswordResetEmail(this.state.formData.email, success, error);
