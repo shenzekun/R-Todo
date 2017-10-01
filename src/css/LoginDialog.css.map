@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,KAAM;EACJ,MAAM,EAAE,IAAI;;AAGd,QAAQ;EACN,WAAW,EAAE,6DAA6D",
+"mappings": "AAAA,KAAM;EACJ,MAAM,EAAE,IAAI;;AAGd,QAAS;EACP,WAAW,EAAE,6DAA6D",
 "sources": ["LoginDialog.scss"],
 "names": [],
 "file": "LoginDialog.css"
