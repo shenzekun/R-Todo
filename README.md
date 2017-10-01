@@ -2,6 +2,12 @@
 
 this is a TodoList and use react
 
+### 测试账号
+
+① 账号：123456  密码：123456
+
+② 账号：111111  密码：111111
+
 ### 预览
 [R-Todo](http://shenzekun.cn/R-Todo/build/index.html)
 
