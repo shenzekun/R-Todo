@@ -26,7 +26,7 @@ class App extends Component {
                 stateCopy.todoList = todos;
                 stateCopy.completeCount = stateCopy.todoList.filter((item) => item.status === 'completed').length;
                 this.setState(stateCopy);
-            })
+            });
         }
     }
 
@@ -64,8 +64,14 @@ class App extends Component {
         )
     }
 
-    componentWillUpdate() {
-
+    componentDidMount() {
+        console.log("1");
+        TodoModel.getByUser(getCurrentUser(), (todos) => {
+            let stateCopy = JSON.parse(JSON.stringify(this.state));
+            stateCopy.todoList = todos;
+            stateCopy.completeCount = stateCopy.todoList.filter((item) => item.status === 'completed').length;
+            this.setState(stateCopy);
+        });
     }
 
     /*监控TodoItem的变化*/
@@ -172,7 +178,8 @@ class App extends Component {
     onSignUpOrSignIn(user) {
         let stateCopy = JSON.parse(JSON.stringify(this.state));//深拷贝
         stateCopy.user = user;
-        this.setState(stateCopy)
+        this.setState(stateCopy);
+        console.log(this.state.user);
     }
 
     /*登出*/

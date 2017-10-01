@@ -4,7 +4,7 @@
   align-items: center;
   border-bottom: 1px solid #eee; }
   .TodoItem .title {
-    width: 310px;
+    width: 309px;
     flex-grow: 1;
     padding: 0 .5em; }
   .TodoItem .completed {

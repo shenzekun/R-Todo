@@ -65,7 +65,7 @@ export default class LoginDialog extends Component {
             return false;
         }
         /*leanCloud.js*/
-        signUp(email, username, password, success, error)
+        signUp(email, username, password, success, error);
     }
 
     /*登录*/
@@ -84,6 +84,7 @@ export default class LoginDialog extends Component {
             return false;
         }
         signIn(username, password, success, error);
+
     }
 
     //获取错误信息
@@ -107,7 +108,7 @@ export default class LoginDialog extends Component {
                     <h2 className="ui teal image header">
                         <img src="http://ohggtqwxx.bkt.clouddn.com/todo.png" className="image" alt="图标"/>
                         <div className="content addFont">
-                            A simple and useful todo
+                            A simple and useful TodoList
                         </div>
                     </h2>
                     {this.state.selectedTab === 'signIn'
@@ -131,6 +132,7 @@ export default class LoginDialog extends Component {
                                 returnToSignIn={this.returnToSignIn.bind(this)}/>
                     }
 
+
                     <div className="ui basic modal">
                         <div className="ui icon header">
                             <i className="remove icon"></i> 错误信息
@@ -146,6 +148,7 @@ export default class LoginDialog extends Component {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         )
@@ -176,7 +179,7 @@ export default class LoginDialog extends Component {
     resetPassword(e) {
         e.preventDefault();
         let success = (success) => {
-            alert(success)
+            alert("发送成功!")
         };
         let error = (error) => {
             console.log(error);

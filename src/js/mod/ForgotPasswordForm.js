@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../../css/ForgotPasswordForm.css'
 
 export default class ForgotPasswordForm extends Component {
     render() {
@@ -8,7 +7,7 @@ export default class ForgotPasswordForm extends Component {
                 <form className="ui large form" onSubmit={this.props.onSubmit}>
                     <div className="ui stacked segment">
                         <div className="field">
-                            <label>邮箱</label>
+                            <label>找回密码</label>
                             <div className="ui left icon input">
                                 <input type="text" placeholder="email" name="email" value={this.props.formData.email}
                                        onChange={this.props.onChange.bind(null, 'email')}/>

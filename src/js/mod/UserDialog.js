@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import TodoInput from './TodoInput'
 import '../../css/UserDialog.css'
+import '../../css/LoginDialog.css'
 import $ from 'jquery';
 
 window.jQuery = $;
@@ -13,8 +14,15 @@ export default class UserDialog extends Component {
         return (
             <div className="user-todo">
                 <div>
-                    <h1><i className="alarm outline icon"></i></h1>
+                    <h1>
+                        <a href="javascript:void(0)">
+                            <i className="alarm outline icon link"
+                               data-content={'完成了' + this.props.completeCount + '个Todo'}
+                               data-variation="wide"></i>
+                        </a>
+                    </h1>
                     <span className="prompt-complete-count">{this.props.completeCount}</span>
+                    <span className="addFont user-show-position">welcome---{this.props.username}</span>
                     {this.props.id
                         ? <button onClick={this.isSignOut.bind(this)}
                                   className="ui circular twitter icon button sign-up-right">
@@ -54,6 +62,11 @@ export default class UserDialog extends Component {
                 </div>
             </div>
         )
+    }
+
+    componentDidMount() {
+        //提示完成多少todo
+        $('.icon.link').popup()
     }
 
     //取消弹窗

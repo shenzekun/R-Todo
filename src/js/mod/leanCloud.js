@@ -83,7 +83,8 @@ export const TodoModel = {
 export function signIn(username, password, successFn, errorFn) {
     AV.User.logIn(username, password).then(function (loginedUser) {
         let user = getUserFromAVUser(loginedUser);
-        successFn.call(null, user)
+        successFn.call(null, user);
+        document.location.reload();
     }, function (error) {
         errorFn.call(null, error)
     })
@@ -103,7 +104,8 @@ export function signUp(email, username, password, successFn, errorFn) {
     user.setEmail(email);
     user.signUp().then(function (loginedUser) {
         let user = getUserFromAVUser(loginedUser);
-        successFn.call(null, user)
+        successFn.call(null, user);
+        document.location.reload();
     }, function (error) {
         errorFn.call(null, error)
     });
