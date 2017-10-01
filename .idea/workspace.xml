@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c8527d-96ef-4e2c-a9f2-8b491f31a920" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/static/js/main.57aa167b.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/static/js/main.57aa167b.js.map" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.62de6f33.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/static/js/main.62de6f33.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/asset-manifest.json" afterPath="$PROJECT_DIR$/build/asset-manifest.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/index.html" afterPath="$PROJECT_DIR$/build/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/service-worker.js" afterPath="$PROJECT_DIR$/build/service-worker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/LoginDialog.css.map" afterPath="$PROJECT_DIR$/src/css/LoginDialog.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/LoginDialog.scss" afterPath="$PROJECT_DIR$/src/css/LoginDialog.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/TodoItem.css.map" afterPath="$PROJECT_DIR$/src/css/TodoItem.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/TodoItem.scss" afterPath="$PROJECT_DIR$/src/css/TodoItem.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.css.map" afterPath="$PROJECT_DIR$/src/css/UserDialog.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/UserDialog.scss" afterPath="$PROJECT_DIR$/src/css/UserDialog.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/static/js/main.57aa167b.js.map" afterPath="$PROJECT_DIR$/build/static/js/main.57aa167b.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,11 +73,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reset.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="reset.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/reset.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
               <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -99,16 +98,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TodoItem.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/mod/TodoItem.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="37" selection-end-line="0" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -197,7 +186,6 @@
         <option value="$PROJECT_DIR$/src/css/index.css" />
         <option value="$PROJECT_DIR$/src/css/TodoInput.scss" />
         <option value="$PROJECT_DIR$/src/js/mod/TodoInput.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/js/mod/TodoItem.js" />
         <option value="$PROJECT_DIR$/src/js/mod/SignInForm.js" />
         <option value="$PROJECT_DIR$/src/js/mod/SignUpForm.js" />
@@ -214,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/css/TodoItem.scss" />
         <option value="$PROJECT_DIR$/src/css/UserDialog.scss" />
         <option value="$PROJECT_DIR$/src/css/LoginDialog.scss" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -393,7 +382,7 @@
       <workItem from="1506749167897" duration="6000" />
       <workItem from="1506839103549" duration="8562000" />
       <workItem from="1506849909565" duration="100000" />
-      <workItem from="1506850039981" duration="62000" />
+      <workItem from="1506850039981" duration="315000" />
     </task>
     <task id="LOCAL-00001" summary="format all file">
       <created>1505786252163</created>
@@ -584,11 +573,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506848918140</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="modify md">
+      <created>1506850122454</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1506850122454</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159750000" />
+    <option name="totallyTimeSpent" value="160003000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -660,7 +656,8 @@
     <MESSAGE value="增加通知用户完成多少数记录过程" />
     <MESSAGE value="增加消息提示" />
     <MESSAGE value="修复了一点小 bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了一点小 bug" />
+    <MESSAGE value="modify md" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -775,13 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/static/css/main.28c2d7be.css.map" />
     <entry file="file://$PROJECT_DIR$/build/static/css/main.28c2d7be.css" />
     <entry file="file://$PROJECT_DIR$/build/static/js/main.50498111.js" />
@@ -822,12 +812,14 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -939,6 +931,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding />
         </state>
       </provider>
