@@ -2,6 +2,8 @@
 
 this is a TodoList and use react
 
+[![Build Status](https://travis-ci.org/shenzekun/R-Todo.svg?branch=master)](https://travis-ci.org/shenzekun/R-Todo)
+
 ### 测试账号
 
 ① 账号：123456  密码：123456
