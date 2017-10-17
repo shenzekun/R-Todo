@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - "6"
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+before_install:
+  # CI server install taobao npm packages too slow.
+  - rm -rf ./yarn.lock
+install:
+  - yarn global add codecov
+  - yarn
+script:
+  - yarn run ci
+  - yarn build # build project for deploy
+after_script:
+  - yarn run codecov
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
+  on:
+    branch: master
