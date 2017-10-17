@@ -12,7 +12,6 @@ install:
   - yarn global add codecov
   - yarn
 script:
-  - yarn run ci
   - yarn build # build project for deploy
 after_script:
   - yarn run codecov
