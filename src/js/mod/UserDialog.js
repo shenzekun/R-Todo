@@ -15,7 +15,7 @@ export default class UserDialog extends Component {
             <div className="user-todo">
                 <div>
                     <h1>
-                        <a href="javascript:void(0)">
+                        <a href="todo">
                             <i className="alarm outline icon link"
                                data-content={'完成了' + this.props.completeCount + '个Todo'}
                                data-variation="wide"></i>

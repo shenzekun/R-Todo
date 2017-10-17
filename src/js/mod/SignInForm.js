@@ -26,8 +26,8 @@ export default class ForgotPasswordForm extends Component {
                     <div className="ui error message"></div>
                 </form>
                 <div className="ui message">
-                    <a href="javascript:void(0)" onClick={this.props.returnToSignUp}>注册</a>&nbsp;or&nbsp;
-                    <a href="javascript:void(0)" onClick={this.props.onForgotPassword}>找回密码</a>
+                    <a href="register" onClick={this.props.returnToSignUp}>注册</a>&nbsp;or&nbsp;
+                    <a href="forgetpassword" onClick={this.props.onForgotPassword}>找回密码</a>
                 </div>
             </div>
         )
